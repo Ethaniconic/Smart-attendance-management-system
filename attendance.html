@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Marking - St. Vincent Pallotti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Check if user is logged in
+        if (!sessionStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" width="50" alt="St. Vincent Pallotti College Logo">
+                <h1>ST. VINCENT PALLOTTI</h1>
+                <p>COLLEGE OF ENGINEERING & TECHNOLOGY, NAGPUR</p>
+                <span>AN AUTONOMOUS INSTITUTION</span>
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" id="student-login">Student login</a></li>
+                <li class="active"><a href="#" id="attendance-marking">Attendance marking</a></li>
+                <li><a href="schedule.html" id="schedule">Schedule</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="attendance-container">
+                <div class="fingerprint-scanner">
+                    <img src="images/fingerprint.png" alt="Fingerprint Scanner">
+                    <div id="scanner-status">Place your finger on the scanner</div>
+                    <button id="mobile-auth-btn" class="btn">Use Device Fingerprint</button>
+                </div>
+                
+                <div class="student-info">
+                    <div class="info-field">
+                        <label>Name:</label>
+                        <span id="student-name"></span>
+                    </div>
+                    <div class="info-field">
+                        <label>UID:</label>
+                        <span id="student-uid"></span>
+                    </div>
+                    <div class="info-field">
+                        <label>Branch:</label>
+                        <span id="student-branch"></span>
+                    </div>
+                    <div class="student-photo">
+                        <img id="student-image" src="images/student-placeholder.jpg" alt="Student Photo">
+                    </div>
+                    <div class="info-field">
+                        <label>Attendance %:</label>
+                        <span id="attendance-percentage"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/fingerprint.js"></script>
+</body>
+</html>
