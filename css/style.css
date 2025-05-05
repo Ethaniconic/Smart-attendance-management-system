@@ -1,0 +1,300 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #4ca1af, #2dc653);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    color: #1a237e;
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.logo p {
+    font-size: 16px;
+}
+
+.logo span {
+    font-size: 14px;
+    color: #e53935;
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+nav ul li {
+    position: relative;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li.active::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #2196f3;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Login Form Styles */
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #8bc34a;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Attendance Page Styles */
+.attendance-container {
+    display: flex;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.fingerprint-scanner {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.fingerprint-scanner img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+#scanner-status {
+    font-size: 16px;
+    color: #666;
+}
+
+.student-info {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-field {
+    margin-bottom: 15px;
+}
+
+.info-field label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.student-photo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.student-photo img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Schedule Page Styles */
+.schedule-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.schedule-container h2 {
+    margin-bottom: 20px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #f5f5f5;
+}
+
+/* Add these responsive styles to your existing CSS */
+
+/* Responsive Attendance Page Styles */
+/* Add this to your existing CSS */
+
+/* Mobile Fingerprint Authentication Button */
+#mobile-auth-btn {
+    display: none; /* Hidden by default, shown via JS on mobile devices */
+    margin-top: 15px;
+    background-color: #2196f3;
+}
+
+/* Show the button on mobile devices */
+@media screen and (max-width: 768px) {
+    #mobile-auth-btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .attendance-container {
+        flex-direction: column;
+    }
+    
+    .fingerprint-scanner {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .student-info {
+        width: 100%;
+    }
+    
+    .fingerprint-scanner img {
+        max-width: 120px;
+    }
+    
+    .student-photo img {
+        width: 100px;
+        height: 125px;
+    }
+    
+    .info-field {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .info-field label {
+        font-weight: bold;
+        margin-right: 0;
+    }
+    
+    /* Adjust header for mobile */
+    .logo h1 {
+        font-size: 20px;
+    }
+    
+    .logo p {
+        font-size: 14px;
+    }
+    
+    .logo span {
+        font-size: 12px;
+    }
+    
+    /* Adjust navigation for mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .logo img {
+        width: 40px !important;
+    }
+    
+    .logo h1 {
+        font-size: 18px;
+    }
+    
+    .fingerprint-scanner {
+        padding: 10px;
+    }
+    
+    .student-info {
+        padding: 10px;
+    }
+    
+    .attendance-container {
+        padding: 15px;
+    }
+}
+
+nav ul li.disabled a {
+    color: #999;
+    cursor: not-allowed;
+    pointer-events: none;
+}

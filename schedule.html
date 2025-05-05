@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - St. Vincent Pallotti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Check if user is logged in
+        if (!sessionStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" width="50" alt="St. Vincent Pallotti College Logo">
+                <h1>ST. VINCENT PALLOTTI</h1>
+                <p>COLLEGE OF ENGINEERING & TECHNOLOGY, NAGPUR</p>
+                <span>AN AUTONOMOUS INSTITUTION</span>
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" id="student-login">Student login</a></li>
+                <li><a href="attendance.html" id="attendance-marking">Attendance marking</a></li>
+                <li class="active"><a href="#" id="schedule">Schedule</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="schedule-container">
+                <h2>Today's schedule:</h2>
+                <table class="schedule-table">
+                    <tr>
+                        <th>S&P</th>
+                        <th>DT</th>
+                        <th>PSP</th>
+                        <th>CP-II</th>
+                        <th>A1, A2 - PSP lab<br>A3 - EP & MS lab</th>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/schedule.js"></script>
+</body>
+</html>
